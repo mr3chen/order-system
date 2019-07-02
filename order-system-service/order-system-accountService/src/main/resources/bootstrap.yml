@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: account
+  cloud:
+    config:
+      name: account  #文件前缀名称
+      enabled: true  #enabled 是否从配置中心读取文件
+      service-id: config   #配置中心的servieId，即服务名
+eureka:
+  client:
+    service-url:
+      defaultZone: http://master:8761/eureka/,http://backup:8762/eureka/
+      
+      
+       

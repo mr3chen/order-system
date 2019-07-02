@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    config:
+      name: gateway  #文件前缀名称
+      enabled: true  #enabled 是否从配置中心读取文件
+      service-id: config   #配置中心的servieId，即服务名
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/,http://127.0.0.1:8762/eureka/
+      
+      
+       

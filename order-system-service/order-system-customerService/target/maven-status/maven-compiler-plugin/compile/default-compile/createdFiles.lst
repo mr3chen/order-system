@@ -1,0 +1,16 @@
+com\order\system\customerService\dao\UserInfoMapper.class
+com\order\system\customerService\client\CacheService.class
+com\order\system\customerService\common\enums\ParamTypeEnum.class
+com\order\system\customerService\CustomerApplication.class
+com\order\system\customerService\client\CacheHystrixService.class
+com\order\system\customerService\config\ExceptionHandlers.class
+com\order\system\customerService\controller\UserInfoController.class
+com\order\system\customerService\config\Swagger2.class
+com\order\system\customerService\common\constant\ProjectConstant.class
+com\order\system\customerService\common\vo\UserInfoVO.class
+com\order\system\customerService\common\query\UserLoginRequest.class
+com\order\system\customerService\service\IUserInfoService.class
+com\order\system\customerService\common\exception\CustomerServiceException.class
+com\order\system\customerService\model\UserInfo.class
+com\order\system\customerService\service\impl\UserInfoServiceImpl.class
+com\order\system\customerService\common\query\UserRegRequest.class

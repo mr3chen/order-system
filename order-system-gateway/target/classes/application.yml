@@ -1,0 +1,7 @@
+server:
+  port: 8080
+
+#需要验证签名的url
+authUrl: /account/getUserBalance.do,/account/updateUserBalance.do
+
+

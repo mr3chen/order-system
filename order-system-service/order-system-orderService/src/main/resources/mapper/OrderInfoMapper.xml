@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.order.system.orderService.dao.OrderInfoMapper">
+  <resultMap id="BaseResultMap" type="com.order.system.orderService.model.OrderInfo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="order_id" jdbcType="INTEGER" property="orderId" />
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+    <!--<result column="status" jdbcType="INTEGER" property="status"-->
+            <!--typeHandler="com.order.system.orderService.model.type.handler.OrderStatusHandler"/>-->
+    <result column="status" jdbcType="INTEGER" property="status"/>
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="user_name" jdbcType="CHAR" property="userName" />
+    <result column="order_no" jdbcType="VARCHAR" property="orderNo" />
+    <result column="pay_status" jdbcType="INTEGER" property="payStatus" />
+    <result column="amount" jdbcType="DECIMAL" property="amount" />
+  </resultMap>
+</mapper>

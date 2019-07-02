@@ -1,0 +1,16 @@
+F:\project\order-system\order-system\order-system-service\order-system-customerService\src\main\java\com\order\system\customerService\service\IUserInfoService.java
+F:\project\order-system\order-system\order-system-service\order-system-customerService\src\main\java\com\order\system\customerService\dao\UserInfoMapper.java
+F:\project\order-system\order-system\order-system-service\order-system-customerService\src\main\java\com\order\system\customerService\common\exception\CustomerServiceException.java
+F:\project\order-system\order-system\order-system-service\order-system-customerService\src\main\java\com\order\system\customerService\model\UserInfo.java
+F:\project\order-system\order-system\order-system-service\order-system-customerService\src\main\java\com\order\system\customerService\client\CacheHystrixService.java
+F:\project\order-system\order-system\order-system-service\order-system-customerService\src\main\java\com\order\system\customerService\client\CacheService.java
+F:\project\order-system\order-system\order-system-service\order-system-customerService\src\main\java\com\order\system\customerService\common\constant\ProjectConstant.java
+F:\project\order-system\order-system\order-system-service\order-system-customerService\src\main\java\com\order\system\customerService\common\query\UserLoginRequest.java
+F:\project\order-system\order-system\order-system-service\order-system-customerService\src\main\java\com\order\system\customerService\controller\UserInfoController.java
+F:\project\order-system\order-system\order-system-service\order-system-customerService\src\main\java\com\order\system\customerService\common\query\UserRegRequest.java
+F:\project\order-system\order-system\order-system-service\order-system-customerService\src\main\java\com\order\system\customerService\CustomerApplication.java
+F:\project\order-system\order-system\order-system-service\order-system-customerService\src\main\java\com\order\system\customerService\common\enums\ParamTypeEnum.java
+F:\project\order-system\order-system\order-system-service\order-system-customerService\src\main\java\com\order\system\customerService\common\vo\UserInfoVO.java
+F:\project\order-system\order-system\order-system-service\order-system-customerService\src\main\java\com\order\system\customerService\service\impl\UserInfoServiceImpl.java
+F:\project\order-system\order-system\order-system-service\order-system-customerService\src\main\java\com\order\system\customerService\config\Swagger2.java
+F:\project\order-system\order-system\order-system-service\order-system-customerService\src\main\java\com\order\system\customerService\config\ExceptionHandlers.java

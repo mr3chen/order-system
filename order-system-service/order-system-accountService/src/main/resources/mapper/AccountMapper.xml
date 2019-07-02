@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.order.system.accountService.dao.AccountMapper">
+    <resultMap id="BaseResultMap" type="com.order.system.accountService.model.Account">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <result column="account_id" jdbcType="INTEGER" property="accountId"/>
+        <result column="balance" jdbcType="DECIMAL" property="balance"/>
+        <result column="user_id" jdbcType="INTEGER" property="userId"/>
+        <result column="status" jdbcType="TINYINT" property="status"/>
+    </resultMap>
+
+
+    <update id="consumeBalance">
+    UPDATE t_account
+    SET balance = balance - #{amount}
+    WHERE user_id = #{userId,jdbcType=BIGINT} AND balance > 0 AND (balance - #{amount}) > 0
+  </update>
+
+    <update id="returnReservedBalance">
+        UPDATE t_account
+        SET balance = balance + #{amount,jdbcType=DECIMAL}
+        WHERE user_id = #{userId,jdbcType=INTEGER}
+    </update>
+
+</mapper>

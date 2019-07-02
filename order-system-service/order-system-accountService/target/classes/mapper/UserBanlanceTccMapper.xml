@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.order.system.accountService.dao.UserBanlanceTccMapper">
+    <resultMap id="BaseResultMap" type="com.order.system.accountService.model.UserBanlanceTcc">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="tuser_balance_tcc_id" jdbcType="BIGINT" property="id"/>
+        <result column="tuser_balance_tcc_create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="tuser_balance_tcc_update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="tuser_balance_tcc_delete_time" jdbcType="TIMESTAMP" property="deleteTime"/>
+        <result column="tuser_balance_tcc_expire_time" jdbcType="TIMESTAMP" property="expireTime"/>
+        <result column="tuser_balance_tcc_status" jdbcType="TINYINT" property="status"/>
+        <result column="tuser_balance_tcc_amount" jdbcType="BIGINT" property="amount"/>
+        <result column="tuser_balance_tcc_t_user_id" jdbcType="BIGINT" property="userId"/>
+    </resultMap>
+
+    <update id="updateToConfirmationById">
+        UPDATE t_user_banlance_tcc
+        SET `tuser_balance_tcc_status` = 1
+        WHERE tuser_balance_tcc_id = #{id,jdbcType=BIGINT} AND `tuser_balance_tcc_status` = 0
+    </update>
+
+    <delete id="deleteTryingById">
+        DELETE FROM t_user_banlance_tcc
+        WHERE tuser_balance_tcc_id = #{id,jdbcType=BIGINT} AND `tuser_balance_tcc_status` = 0
+    </delete>
+
+
+</mapper>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.order.system.productService.dao.ProductStockTccMapper">
+    <resultMap id="BaseResultMap" type="com.order.system.productService.model.ProductStockTcc">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <result column="product_stock_tcc_id" jdbcType="INTEGER" property="productStockTccId"/>
+        <result column="product_id" jdbcType="INTEGER" property="productId"/>
+        <result column="stack" jdbcType="BIGINT" property="stack"/>
+        <result column="status" jdbcType="INTEGER" property="status"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+        <result column="delete_time" jdbcType="TIMESTAMP" property="deleteTime" />
+        <result column="expire_time" jdbcType="TIMESTAMP" property="expireTime" />
+    </resultMap>
+
+    <update id="updateToConfirmationById">
+        UPDATE t_product_stock_tcc
+        SET `status` = 1
+        WHERE product_stock_tcc_id = #{id} AND `status` = 0
+    </update>
+
+    <delete id="deleteTryingById">
+        DELETE FROM t_product_stock_tcc
+        WHERE product_stock_tcc_id = #{id,jdbcType=BIGINT} AND `status` = 0
+    </delete>
+
+    <insert id="insertAndReturnTccId" parameterType="com.order.system.productService.model.ProductStockTcc"
+            useGeneratedKeys="true"
+            keyProperty="productStockTccId">
+        INSERT INTO t_product_stock_tcc (product_stock_tcc_id, create_time, update_time,
+                                         expire_time, status,
+                                         stack,product_id)
+        VALUES (#{productStockTccId,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP},
+                #{expireTime,jdbcType=TIMESTAMP},
+                #{status,jdbcType=TINYINT},
+                #{stack,jdbcType=BIGINT},#{productId,jdbcType=INTEGER})
+    </insert>
+
+
+</mapper>

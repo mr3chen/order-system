@@ -1,0 +1,16 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/zhonghao-loli/config-repo.git
+          search-paths: '{profile}'
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.114.15:8761/eureka/,http://192.168.114.15:8762/eureka/
